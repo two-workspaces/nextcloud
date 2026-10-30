@@ -41,7 +41,7 @@ The stack is three services: Nextcloud, Postgres and Redis.
 
 **Email.** Nextcloud sends share notifications and password resets by email. Railway only allows outbound SMTP on the Pro plan; on Pro, set it up under Administration settings → Basic settings.
 
-**Custom domain.** Add it in the Nextcloud service's Settings → Networking, then add it to Nextcloud's trusted domains in a `railway ssh` session on the Nextcloud service: `su -s /bin/sh www-data -c "php occ config:system:set trusted_domains 1 --value=cloud.example.com"`, and set `OVERWRITECLIURL` to `https://` plus your domain.
+**Custom domain.** Add it in the Nextcloud service's Settings → Networking, then add it to Nextcloud's trusted domains in a `railway ssh` session on the Nextcloud service: `su -s /bin/sh www-data -c "php occ config:system:set trusted_domains 2 --value=cloud.example.com"`, and set `OVERWRITECLIURL` to `https://` plus your domain.
 
 ## Why Deploy Nextcloud on Railway?
 

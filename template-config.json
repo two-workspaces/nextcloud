@@ -11,7 +11,7 @@
         "restartPolicyMaxRetries": 10
       },
       "source": {
-        "image": "ghcr.io/two-workspaces/nextcloud:9623ac7"
+        "image": "ghcr.io/two-workspaces/nextcloud:67a6e97"
       },
       "variables": {
         "PORT": {
@@ -30,8 +30,8 @@
           "isOptional": false
         },
         "NEXTCLOUD_TRUSTED_DOMAINS": {
-          "defaultValue": "${{RAILWAY_PUBLIC_DOMAIN}}",
-          "description": "Domains Nextcloud answers on, set on first boot - add your custom domain with occ afterwards",
+          "defaultValue": "${{RAILWAY_PUBLIC_DOMAIN}} healthcheck.railway.app",
+          "description": "Domains Nextcloud answers on, set on first boot (the second is Railway's healthcheck) - add your custom domain with occ afterwards",
           "isOptional": false
         },
         "OVERWRITEPROTOCOL": {
