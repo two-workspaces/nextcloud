@@ -4,5 +4,6 @@
   "description": "Nextcloud 34 on Postgres and Redis, admin ready on boot, cron included",
   "category": "Other",
   "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg",
-  "card_desc": "Nextcloud file sync and collaboration on Postgres and Redis: admin created on first boot, background jobs on cron, upgrades on a tag bump."
+  "card_desc": "Nextcloud file sync and collaboration on Postgres and Redis: admin created on first boot, background jobs on cron, upgrades on a tag bump.",
+  "id": "07d70aba-a0fa-4c3e-b9aa-07c493a3a701"
 }

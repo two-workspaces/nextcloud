@@ -9,5 +9,7 @@ COPY --chmod=755 hooks/post-installation.sh /docker-entrypoint-hooks.d/post-upgr
 
 # The Apache image ships cron.sh (busybox crond running cron.php every 5 minutes as www-data) but only
 # the separate cron container runs it; run it beside Apache instead.
-ENTRYPOINT ["sh", "-c", "/cron.sh & exec /entrypoint.sh apache2-foreground"]
+# Railway flattens image layers without applying deletions, so the php:apache base's disabled
+# mpm_event links come back ("More than one MPM loaded"): remove them at start instead.
+ENTRYPOINT ["sh", "-c", "rm -f /etc/apache2/mods-enabled/mpm_event.*; /cron.sh & exec /entrypoint.sh apache2-foreground"]
 CMD []
