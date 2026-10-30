@@ -37,7 +37,7 @@ The stack is three services: Nextcloud, Postgres and Redis.
 
 **Storage.** Files live on the Nextcloud service's volume at `/var/www/html/data`. Grow the volume in the service's settings as you add files, and enable Railway's volume backups on it and on the Postgres volume.
 
-**Memory.** Around 350 MB at idle: about 200 MB for Nextcloud, 100 MB for Postgres and a few MB for Redis. Previews of large images and office documents take more while they render. It fits every plan.
+**Memory.** Around 250 MB at idle: under 100 MB for Nextcloud, 170 MB for Postgres and a few MB for Redis. Each request can use up to `PHP_MEMORY_LIMIT` (512 MB) while it renders previews or zips folders, so the Trial plan and above are the comfortable fit. The template also clears the kernel's file cache every 15 minutes, which Railway would otherwise show as memory.
 
 **Email.** Nextcloud sends share notifications and password resets by email. Railway only allows outbound SMTP on the Pro plan; on Pro, set it up under Administration settings → Basic settings.
 
