@@ -1,0 +1,8 @@
+{
+  "name": "Nextcloud",
+  "short_name": "Nextcloud Server",
+  "description": "Nextcloud 34 on Postgres and Redis, admin ready on boot, cron included",
+  "category": "Other",
+  "image": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg",
+  "card_desc": "Nextcloud file sync and collaboration on Postgres and Redis: admin created on first boot, background jobs on cron, upgrades on a tag bump."
+}
